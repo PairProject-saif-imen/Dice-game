@@ -63,14 +63,14 @@ function savePlayer2(e) {
     players.user2 = e.target.value;
 }
 
+$("#use1").on("change", savePlayer1);
+$("#use2").on("change", savePlayer2);
 
-$(document).ready(function () {
-    $("#S").click(function (e) {
-        $("#use1").on("change", savePlayer1);
-        $("#use2").on("change", savePlayer2);
-        $("#player1").append(user1);
-        $("#player2").append(user2);
-    })
+
+    $("#S").click(function () {
+        $("#player1").append(player1);
+        $("#player2").append(player2);
+    
 
 
 
