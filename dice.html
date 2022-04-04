@@ -1,15 +1,44 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-    <meta charset="UTF-8">
-    <title>Dice Game</title>
-   <link rel="stylesheet" href="dice.css">
-   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <meta charset="utf-8">
+    <title>Mel DiceGame</title>
+    <link rel="stylesheet" href="dice.css">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+        integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
 </head>
-<body>
-    <button id="btn1">play</button>
-    <img src="">
-    
-    <script src="dice.js"></script>
+
+<body class="mainPage">
+<div>
+    <input id="use1" type="text" placeholder="player1 enter your name please ">
+    <input id="use2" type="text" placeholder="player2 enter your name please ">
+    <input id="S" type="submit" value="click">
+</div>
+
+    <div class="d-flex justify-content-center diceGame">
+        <div id="player1">
+
+
+
+            <img class="image1" src="/images/dice6.png" alt="diceP1">
+        </div>
+        <div id="player2">
+
+
+            <img class="image1" src="/images/dice6.png" alt="diceP2">
+        </div>
+    </div>
+    <div class="d-flex justify-content-center playbtn">
+        <button id="goBtn" class="btn btn-outline-success" onclick="displayDice()">START</button>
+    </div>
+    <footer>
+        <div class="d-flex justify-content-center titleSec">
+            <h1 id="title">Let's Shake!</h1>
+        </div>
+    </footer>
+    <script src="dice.js" charset="utf-8"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
 </body>
+
 </html>

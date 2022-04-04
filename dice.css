@@ -1,0 +1,65 @@
+.image1, .image2 {
+    height: 120px;
+    width: 120px;
+  }
+  
+  .mainPage {
+    background-color: #ccba7f;
+  }
+  
+  .playbtn {
+    margin-top: 3%;
+  }
+  
+  #title {
+  font-family: 'comic sans ms', sans-serif;
+  font-size: 20px;
+  margin-top: 1.5%;
+  margin-bottom: 1.5%; 
+  }
+  
+  
+   .diceGame #player1, .diceGame #player2 {
+    margin-top: 7%;
+  
+  }
+  
+  #player1 {
+    margin-right: 50%;
+  }
+  
+  .diceGame h5 {
+    font-family: 'Amaranth', sans-serif;
+    text-align: center;
+    margin-bottom: 10%;
+  }
+  
+  .playbtn .btn-outline-success  {
+    color: #7c0a02;
+    font-weight: bold;
+    font-family: 'comic sans ms', sans-serif;
+    font-size: 30px;
+  }
+  .playbtn .btn {
+    background-color: #f8ce44;
+    padding-right: 2%;
+    padding-left: 2%;
+    margin-top: 0%;
+  }
+  /* .titleSec, .choosePlayer {
+    background-color: #f8ce44;
+    margin-top:-5%;
+  } */
+  footer {
+    text-align: center;
+    font-family: 'Amaranth', sans-serif;
+    margin-top: 7%;
+    font-size: 12px;
+  }
+  
+  .roundCounter {
+    background-color: red;
+    height: 75px;
+    width: 75px;
+    border-radius: 50px;
+  }
