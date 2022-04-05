@@ -50,8 +50,12 @@ var questions = [
     CorrectAnswer: "8",
   },
 ];
+var playCount = 0,
+  count1 = 0,
+  count2 = 0,
+  currentPlayer = "";
 
-function fillQuestions() {
+function fillQuestions(currentPlayer) {
   const questionElement = document.getElementById("questions");
   const html = questions.map((question, index) => {
     const answers = question.Answers.map(
@@ -60,7 +64,7 @@ function fillQuestions() {
     return `<div>
     <label for=${index}>${question.question}</label>
 
-<select onchange="editScore(${index})" name="question-${index}" id=${index}>
+<select onchange="editScore(${index}, ${currentPlayer})" name="question-${index}" id=${index}>
  ${answers}
   
 </select> </div> `;
@@ -69,13 +73,9 @@ function fillQuestions() {
   questionElement.innerHTML = html;
 }
 
-$("#question").append(fillQuestions());
+$("#question").append(fillQuestions(currentPlayer));
 
 //Dice part
-var playCount = 0,
-  count1 = 0,
-  count2 = 0,
-  currentPlayer = "";
 
 function displayDice() {
   var dicePlayer1 = Math.floor(Math.random() * 6) + 1;
@@ -124,6 +124,7 @@ function displayDice() {
 }
 
 function editScore(questionId, currentPlayer, score) {
+  console.log(currentPlayer);
   const question = document.getElementById(questionId);
   if (questions[questionId].CorrectAnswer === question.value) {
     const score = document.getElementById("score");
