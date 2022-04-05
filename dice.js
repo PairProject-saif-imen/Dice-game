@@ -1,25 +1,3 @@
-// console.log("check")
-// /
-// dice = [
-//     { val: 1, image: "" },
-//     { val: 2, image: "" },
-//     { val: 3, image: "" },
-//     { val: 4, image: "" },
-//     { val: 5, image: "" },
-//     { val: 6, image: "" }
-
-// ]
-// $("#image1").append(dice[Math.floor(Math.random() * 6)], function () {
-//     $("#bnt1").click()
-// })
-// $("#image2").append(dice[Math.floor(Math.random() * 6)], function () {
-//     $("#bnt2").click()
-// })
-// function compar() {
-//     if (
-
-// src = dice[0].image
-/////////////
 var questions = [
   {
     question: "How many days are there in a normal year?",
@@ -91,7 +69,61 @@ function fillQuestions() {
   questionElement.innerHTML = html;
 }
 
-function editScore(questionId) {
+$("#question").append(fillQuestions());
+
+//Dice part
+var playCount = 0,
+  count1 = 0,
+  count2 = 0,
+  currentPlayer = "";
+
+function displayDice() {
+  var dicePlayer1 = Math.floor(Math.random() * 6) + 1;
+  var dicePlayer2 = Math.floor(Math.random() * 6) + 1;
+  var imageP1 = $("img")[0];
+  var imageP2 = $("img")[1];
+  imageP1.src = "/images/dice" + dicePlayer1 + ".png";
+
+  imageP2.src = "/images/dice" + dicePlayer2 + ".png";
+  var title = document.querySelector("#title");
+
+  if (dicePlayer1 > dicePlayer2) {
+    title.textContent = " PLAYER 1 Wins";
+    title.classList.add("#title");
+    count1++;
+  } else if (dicePlayer2 > dicePlayer1) {
+    title.textContent = "PLAYER 2 Wins ";
+    title.classList.add("#title");
+    count2++;
+  } else {
+    title.textContent = "Twinning Play Again";
+    title.classList.add("#title");
+  }
+  playCount++;
+
+  if (playCount === 5) {
+    if (count1 > count2) {
+      title.textContent = "Round Winner: PLAYER 1 is Playing  ";
+      currentPlayer = "Player 1";
+      count1 = 0;
+      count2 = 0;
+      playCount = 0;
+    } else if (count1 < count2) {
+      title.textContent = "Round Winner: PLAYER 2 is Playing";
+      currentPlayer = "Player 2";
+      count1 = 0;
+      count2 = 0;
+      playCount = 0;
+    } else {
+      title.textContent = " Oh! No Winner let's do it again";
+      count1 = 0;
+      count2 = 0;
+      playCount = 0;
+    }
+  }
+}
+
+function editScore(questionId, currentPlayer, score) {
   const question = document.getElementById(questionId);
   if (questions[questionId].CorrectAnswer === question.value) {
     const score = document.getElementById("score");
@@ -101,3 +133,27 @@ function editScore(questionId) {
     } else score.innerHTML = 5;
   }
 }
+
+// var players = {
+//     user1: "",
+//     user2: ""
+// }
+// function savePlayer1(e) {
+//     players.user1 = e.target.value;
+// }
+// function savePlayer2(e) {
+//     players.user2 = e.target.value;
+// }
+
+// var player1 = $("<h5 id ='u1'></h5>")
+// $("#player1").append(u1);
+// var player2 = $("<h5 id ='u2'></h5>")
+// $("#player2").append(u2);
+
+// $("#use1").on("change", savePlayer1);
+// $("#use2").on("change", savePlayer2);
+
+//     $("#s").click(function () {
+
+//         $("#t").hide()
+//     })
