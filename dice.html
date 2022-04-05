@@ -7,45 +7,38 @@
     <link rel="stylesheet" href="dice.css">
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
         integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
-        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
 
 </head>
 
-
 <body class="mainPage">
-    <!-- <center>
-<div id="t">  
-    <input id="use1" type="text" placeholder="Name player1" style="background: #ccba7f ;"><br>
-    <input id="use2" type="text" placeholder="Name player2" style="background: #ccba7f;"><br>
-    <button id="s">click</button>
-</div>
-</center> -->
-
     <div class="d-flex justify-content-center diceGame">
         <div id="player1">
             <h5>Player1</h5><br>
             <img class="image1" src="/images/dice6.png" alt="diceP1">
+            <br><br>
+            <h5 id="score1">Score : </h5>
         </div>
         <div id="player2">
             <h5>Player2</h5><br>
             <img class="image1" src="/images/dice6.png" alt="diceP2">
+            <br><br>
+            <h5 id="score2">Score : </h5>
         </div>
     </div>
     <div class="d-flex justify-content-center playbtn">
-        <button id="goBtn" class="btn btn-outline-success" onclick="displayDice()">START</button>
-    </div>        <br>
+        <button id="goBtn" class="btn btn-outline-success" onclick="displayDice()"> START</button>
+    </div> <br>
 
     <div class="d-flex justify-content-center titleSec">
         <h1 id="title">Let's Shake!</h1>
     </div>
-    <div id="questions"  class="question">
+    <center>
+    <div id="questions" class="question">
+    </center>
 
     </div>
-    <div id="score"></div>
 
-    <!-- <script>
-        fillQuestions()
-    </script> -->
     <script src="dice.js" charset="utf-8"></script>
 </body>
 

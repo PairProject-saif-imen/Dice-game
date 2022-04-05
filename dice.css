@@ -18,10 +18,10 @@
   }
   
   
-   .diceGame #player1, .diceGame #player2 {
+   /* .diceGame #player1, .diceGame #player2 {
     margin-top: 7%;
   
-  }
+  } */
   
   #player1 {
     margin-right: 50%;
