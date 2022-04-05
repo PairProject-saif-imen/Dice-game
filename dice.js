@@ -23,7 +23,7 @@ function displayDice() {
 
 
     } else {
-        title.textContent = "Twinning ";
+        title.textContent = "Twinning Play Again";
         title.classList.add("#title");
     }
     playCount++;
@@ -47,32 +47,32 @@ function displayDice() {
         }
     }
 }
-var players = {
-    user1: "",
-    user2: ""
-}
-
-var player1 = $("<h5 id ='u1'></h5>")
-$("#player1").append(u1);
-var player2 = $("<h5 id ='u2'></h5>")
-$("#player2").append(u2);
-function savePlayer1(e) {
-    players.user1 = e.target.value;
-}
-function savePlayer2(e) {
-    players.user2 = e.target.value;
-}
-
-$("#use1").on("change", savePlayer1);
-$("#use2").on("change", savePlayer2);
-
-
-    $("#S").click(function () {
-        $("#player1").append(player1);
-        $("#player2").append(player2);
-    
 
 
 
+// var players = {
+//     user1: "",
+//     user2: ""
+// }
+// function savePlayer1(e) {
+//     players.user1 = e.target.value;
+// }
+// function savePlayer2(e) {
+//     players.user2 = e.target.value;
+// }
 
-})
+// var player1 = $("<h5 id ='u1'></h5>")
+// $("#player1").append(u1);
+// var player2 = $("<h5 id ='u2'></h5>")
+// $("#player2").append(u2);
+
+// $("#use1").on("change", savePlayer1);
+// $("#use2").on("change", savePlayer2);
+
+
+//     $("#s").click(function () {
+        
+       
+//         $("#t").hide()
+//     })
+
