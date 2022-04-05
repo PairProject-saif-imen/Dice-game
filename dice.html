@@ -12,22 +12,22 @@
 
 
 <body>
-    <div>
-        <img id="image1" src="https://images-na.ssl-images-amazon.com/images/I/61b-7+cowML.png">
-        <img id="image2" src="">
-        <button id="bnt1">Player 1</button>
-        <button id="bnt2">Player 2</button>
+    <div class="dice">
+
     </div>
+
+    <div id="questions"  class="question">
+
+
+    </div>
+
+    <div id="score"></div>
 
     <script src="dice.js"></script>
     <script>
-        function play() {
-            var audio = new Audio("https://www.youtube.com/watch?v=JNIh9xtNI68");
-            console.log('hello');
-            audio.play();
-        }
+        fillQuestions()
     </script>
-    <button onclick=play()>PLAY MY AUDIO</button>
+
 </body>
 
 </html>
